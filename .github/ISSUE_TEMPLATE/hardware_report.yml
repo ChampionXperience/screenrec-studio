@@ -1,0 +1,46 @@
+name: Hardware report (AMD / Intel / other GPUs)
+description: Tell us how ScreenRec Studio works on your graphics card – especially AMD, which is experimental
+labels: [hardware]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We can't test every GPU ourselves. A short report helps a lot – both "works great" and "doesn't work".
+  - type: input
+    id: gpu
+    attributes:
+      label: Graphics card(s) and driver version
+      placeholder: e.g. AMD Radeon RX 7800 XT, Adrenalin 25.10.1
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: ScreenRec Studio version
+    validations:
+      required: true
+  - type: checkboxes
+    id: tested
+    attributes:
+      label: What did you test?
+      options:
+        - label: Recording with the GPU encoder (H.264)
+        - label: Recording with the GPU encoder (HEVC / AV1)
+        - label: Region capture
+        - label: Zoom into area while recording
+        - label: Pause / resume
+        - label: System audio / microphone
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options:
+        - Everything worked
+        - Worked with problems
+        - Did not work
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details, error messages or sample video settings

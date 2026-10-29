@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+build/
+dist/
+*.spec.bak
+# FFmpeg is downloaded at build time (packaging/build.ps1 and the release workflow)
+ffmpeg/ffmpeg.exe
+# local settings and test output
+*.ini
+*.mp4
+*.mkv
+.venv-build/

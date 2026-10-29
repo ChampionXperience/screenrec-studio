@@ -1,0 +1,45 @@
+name: Bug report
+description: Something doesn't work as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! Tip: **Settings → About & updates → Report a problem…** fills in the system fields for you.
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Select encoder …
+        2. Press Ctrl+Alt+F9 …
+  - type: input
+    id: version
+    attributes:
+      label: ScreenRec Studio version
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Windows version
+  - type: textarea
+    id: gpu
+    attributes:
+      label: Graphics card(s) and driver
+  - type: input
+    id: encoders
+    attributes:
+      label: Available encoders / FFmpeg
+  - type: textarea
+    id: log
+    attributes:
+      label: Error message or log (optional)
+      render: text
