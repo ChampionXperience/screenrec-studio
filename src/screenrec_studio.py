@@ -176,6 +176,9 @@ STRINGS = {
     "right": ("Sağ:", "Right:"),
     "click_colors": ("Tıklama renkleri:", "Click colors:"),
     "preview": ("Vurguyu önizle", "Preview highlight"),
+    "preview_stop": ("■ Önizlemeyi durdur (tekrar tıklayın)", "■ Stop preview (click again)"),
+    "preview_tip": ("Önizleme siz kapatana kadar açık kalır. Önizlemeden çıkmak için bu düğmeye tekrar tıklayın.",
+                    "The preview stays on until you turn it off. Click this button again to exit the preview."),
     "pick_color": ("Renk seç", "Pick a color"),
     "grp_pause": ("Duraklatma ve diğer", "Pause && other"),
     "restore": ("Devam edince imleci duraklatılan konuma geri getir",
@@ -3386,6 +3389,22 @@ class MainWindow(QWidget):
         credit.setAlignment(Qt.AlignCenter)
         credit.setStyleSheet("color:#7a7a7a; font-size:11px; padding-top:2px;")
         root.addWidget(credit)
+        self._setup_preview_buttons()
+
+    def _setup_preview_buttons(self):
+        """Onizleme dugmeleri ac/kapa calisir: acikken yazisi ve rengi degisir, cikmak icin tekrar tiklanacagini
+        soyler. Kullanicilar onizlemenin kendiliginden kapanmasini bekleyip ekranda kalan vurguyu hata sanabiliyordu."""
+        active_css = ("QPushButton{background:#c62828;color:white;border:none;border-radius:4px;padding:5px;"
+                      "font-weight:bold;}")
+        for btn, key in ((self.btn_preview, "preview"), (self.btn_lens_preview, "lens_preview"),
+                         (self.btn_keys_preview, "keys_preview"), (self.btn_cam_preview, "cam_preview")):
+            btn.setToolTip(t("preview_tip"))
+
+            def sync(on, btn=btn, key=key):
+                btn.setText(t("preview_stop") if on else t(key))
+                btn.setStyleSheet(active_css if on else "")
+
+            btn.toggled.connect(sync)
 
     @staticmethod
     def _with_percent(slider):

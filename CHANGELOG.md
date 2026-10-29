@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Preview buttons in the settings now turn red and read “Stop preview (click again)” while a preview is running,
+  with a tooltip explaining how to exit the preview
+- The update dialog shows only the “What's new” part of the release notes
+
 ## 1.0.0
 
 First public release.

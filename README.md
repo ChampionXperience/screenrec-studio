@@ -91,6 +91,10 @@ Laptops with two GPUs (e.g. Intel + NVIDIA) work: the display GPU captures, NVEN
 
 All hotkeys can be changed or cleared in the settings. Only *Start* is reserved while you are not recording.
 
+> **Tip – preview buttons:** the *Preview* buttons in the settings (highlight, magnifier, keystrokes, webcam) stay on
+> until you turn them off. To exit a preview, **click the same button again** – it turns red and reads
+> *“Stop preview (click again)”* while the preview is running.
+
 ## Build from source
 
 ```powershell
@@ -151,6 +155,10 @@ Ayarlarınız `%APPDATA%\ScreenRec Studio` klasöründe saklanır, güncellemede
 
 **Ekran kartları:** NVIDIA ve Intel desteklenir ve test edilmiştir; AMD deneyseldir. Donanım kodlayıcı yoksa kayıt
 işlemciyle yapılır. NVIDIA için sürücü 570 veya üzeri gerekir.
+
+**Önizleme düğmeleri:** Ayarlardaki *önizle* düğmeleri (vurgu, mercek, tuş gösterimi, webcam) siz kapatana kadar açık
+kalır. Önizlemeden çıkmak için **aynı düğmeye tekrar tıklayın**; önizleme açıkken düğme kırmızı olur ve
+*“Önizlemeyi durdur (tekrar tıklayın)”* yazar.
 
 **Sorun bildirme:** Programdaki *Sorun bildir…* düğmesi, sistem bilgileri doldurulmuş bir GitHub sayfası açar.
 
