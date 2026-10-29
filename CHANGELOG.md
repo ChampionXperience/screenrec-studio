@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.0.1
 
 - Preview buttons in the settings now turn red and read “Stop preview (click again)” while a preview is running,
   with a tooltip explaining how to exit the preview

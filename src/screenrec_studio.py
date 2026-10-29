@@ -59,7 +59,7 @@ except Exception:  # noqa: BLE001
     zmq = None
 
 APP_NAME = "ScreenRec Studio"
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 AUTHOR = "ChampionXperience"
 AUTHOR_URL = "https://blog.championxperience.com"
 GITHUB_REPO = "ChampionXperience/screenrec-studio"
