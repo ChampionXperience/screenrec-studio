@@ -16,6 +16,16 @@
 
 ▶ **[Watch the 2-minute feature tour (MP4, English subtitles)](https://github.com/ChampionXperience/screenrec-studio/releases/download/v1.0.0/ScreenRecStudio-Feature-Tour-EN.mp4)** – recorded with ScreenRec Studio itself.
 
+## Why we built it
+
+We have been producing [technical blog](https://blog.championxperience.com) content for many years, and along the way
+we used a lot of screen recorders. A feature we loved in one was always missing in another, so we kept settling for
+whatever tools we had. In the end we took the features we liked most from many screen recorders, improved them and
+built them into our own software. We are releasing it **completely free** so it can help content creators like us.
+
+Have an idea or a feature request? [Open an issue](https://github.com/ChampionXperience/screenrec-studio/issues/new/choose)
+or send a [pull request](https://github.com/ChampionXperience/screenrec-studio/pulls) – let's improve it together.
+
 ## Features
 
 - **Hardware encoding** – NVIDIA NVENC (H.264 / HEVC / AV1), Intel Quick Sync, AMD AMF *(experimental)*, CPU x264 fallback.
@@ -119,6 +129,17 @@ Created by **[ChampionXperience](https://blog.championxperience.com)**.
 
 **ScreenRec Studio**, Windows için ekran kartı hızlandırmalı bir ekran kaydedicidir: canlı çizim, alana zoom, mercek,
 tuş gösterimi, webcam, sistem sesi ve mikrofon, duraklat/devam (imleç kaldığı yere döner).
+
+### Neden yaptık?
+
+Uzun yıllardır [teknik blog](https://blog.championxperience.com) içerikleri üretiyoruz. Bu sebeple birçok ekran
+kaydetme programı kullandık. Birinde olan özellik diğerinde olmadığı için elimizdeki araçlarla yetinmek zorunda kaldık.
+Birçok ekran kaydetme programındaki beğendiğimiz özellikleri geliştirerek kendi yazılımımıza dahil ettik. Bizim gibi
+içerik üreticilere faydalı olması için **tamamen ücretsiz** yayınladık.
+
+Bir geliştirme talebiniz varsa [öneri açın](https://github.com/ChampionXperience/screenrec-studio/issues/new/choose)
+ya da [Pull Request](https://github.com/ChampionXperience/screenrec-studio/pulls) gönderin; yazılımı birlikte
+geliştirelim.
 
 **Kurulum:** [Son sürüm](https://github.com/ChampionXperience/screenrec-studio/releases/latest) sayfasından
 `ScreenRecStudio-<sürüm>-Setup.exe` dosyasını indirip çalıştırın. Yönetici izni gerekmez, FFmpeg dahildir.
