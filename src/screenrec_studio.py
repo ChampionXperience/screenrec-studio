@@ -2741,6 +2741,16 @@ def version_tuple(v):
     return tuple(int(x) for x in re.findall(r"\d+", str(v).split("-")[0])[:3])
 
 
+def release_notes_text(body):
+    """Surum sayfasindaki aciklamanin sadece 'What's new' kismini duz metin olarak dondurur
+    (ustteki indirme talimatlari ve Markdown isaretleri guncelleme penceresinde gosterilmez)."""
+    if "## What's new" in body:
+        body = body.split("## What's new", 1)[1]
+    body = re.sub(r"<[^>]+>", "", body)
+    body = re.sub(r"[*`#]+", "", body)
+    return re.sub(r"\n{3,}", "\n\n", body).strip()
+
+
 def repo_configured():
     return not GITHUB_REPO.startswith("OWNER/")
 
@@ -3478,7 +3488,8 @@ class MainWindow(QWidget):
         if self.state != "idle":
             QMessageBox.information(self, t("app_title"), t("upd_busy"))
             return
-        notes = info["notes"][:1500] + ("…" if len(info["notes"]) > 1500 else "")
+        notes = release_notes_text(info["notes"])
+        notes = notes[:1500] + ("…" if len(notes) > 1500 else "")
         box = QMessageBox(self)
         box.setWindowTitle(t("upd_available_title"))
         box.setText(t("upd_available", name=APP_NAME, new=info["version"], cur=VERSION, notes=notes or "-"))
