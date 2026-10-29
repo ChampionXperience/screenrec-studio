@@ -14,6 +14,8 @@
 
 ![Live drawing](docs/images/drawing.jpg)
 
+▶ **[Watch the 2-minute feature tour (MP4, English subtitles)](https://github.com/ChampionXperience/screenrec-studio/releases/download/v1.0.0/ScreenRecStudio-Feature-Tour-EN.mp4)** – recorded with ScreenRec Studio itself.
+
 ## Features
 
 - **Hardware encoding** – NVIDIA NVENC (H.264 / HEVC / AV1), Intel Quick Sync, AMD AMF *(experimental)*, CPU x264 fallback.
